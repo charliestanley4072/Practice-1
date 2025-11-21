@@ -1,5 +1,7 @@
 body {
 	margin-left: 50px; /*indents everything inside 'body' by 50px*/
+	background: #0CC6C6;
+	color: black;
 }
 
 #weather { /*'#' targets anything with the id specified after*/
@@ -24,12 +26,19 @@ body {
 	display: flex; /*automatically arranges child elements in row or column*/
 	justify-content: flex-start;
 	align-items: center; /*centres content on cross axis (vertical here)*/
+	background: white;
 }
 
 #mainButtonContainer #Cloud9ine-logo {
 	height: 60%;
 	object-fit: contain;
 	margin-left: 10px;
+}
+
+.center-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .buttons {
@@ -43,35 +52,34 @@ body {
 	width: 100%;
 }
 
-.image-container-London {
-	width: 600px;
-	position: relative;
-	margin: 0;
-}
-
-.image-container-London img {
-	width: 100%;
-	z-index: 1;
-	display: block;
-}
-
-.map-pin-ring-London {
+#hoverBox {
+	padding: 5px 15px;
 	position: absolute;
-	top: 586px;
-	left: 445px;
-	width: 20px;
-	height: 18px;
-	border: 3px solid white;
+	background-color: black;
+	opacity: 0.6;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+	/*transition: all 0.3s ease;*/
+	z-index: 2;
+}
+
+#pin-ring {
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	border: 2px solid white;
 	border-radius: 50%;
 	background: transparent;
 	z-index: 2;
 	box-shadow: 0 0 2px 1px rgba(0,0,0,0.6);
 }
 
-.map-pin-circle-London {
+#pin-circle {
 	position: absolute;
-	width: 14px;
-	height: 14px;
+	width: 10px;
+	height: 10px;
 	z-index: 3;
 	top: 50%;
 	left: 50%;
@@ -81,19 +89,69 @@ body {
 	box-shadow: 0 0 2px 1px rgba(0,0,0,0.6);
 }
 
-#hoverBox {
-	padding: 7px 20px;
-	position: absolute;
-	top: 73%;
-	left: 80%;
-	background-color: black;
-	opacity: 0.4;
-	color: white;
-	font-size: 16px;
-	cursor: pointer;
-	text-align: center;
-	transition: all 0.3s ease;
-	z-index: 2;
+.image-container {
+	width: 600px;
+	position: relative;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.image-container img {
+	width: 100%;
+	z-index: 1;
+	display: block;
+}
+
+.hoverBox-London {
+	top: 77%;
+	left: 86%;
+}
+.hoverBox-Edinburgh {
+	top: 40.75%;
+	left: 63%;
+}
+.hoverBox-Bristol {
+	top: 80%;
+	left: 58%;
+}
+.hoverBox-Cardiff {
+	top: 77%;
+	left: 86%;
+}
+.hoverBox-Exeter {
+	top: 77%;
+	left: 86%;
+}
+.hoverBox-Leeds {
+	top: 77%;
+	left: 86%;
+}
+
+.pin-London {
+	top: 620px;
+	left: 490px;
+}
+.pin-Edinburgh {
+	top: 330px;
+	left: 353px;
+}
+.pin-Bristol {
+	top: 616px;
+	left: 395px;
+}
+.pin-Cardiff {
+	top: 620px;
+	left: 490px;
+}
+.pin-Exeter {
+	top: 620px;
+	left: 490px;
+}
+.pin-Leeds {
+	top: 620px;
+	left: 490px;
 }
 
 #hoverBox:hover {
