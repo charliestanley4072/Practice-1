@@ -1,0 +1,101 @@
+body {
+	margin-left: 50px; /*indents everything inside 'body' by 50px*/
+}
+
+#weather { /*'#' targets anything with the id specified after*/
+	font-weight: 600; /*font-weight and font-size change thickness and size of letters*/
+	font-size: 100px;
+	margin: 0; /*removes automatic margin that causes unnecessary empty space below*/
+	margin-left: -20px; /*counteracts margin-left indentation for body (set earlier) to make aligmnment look better*/
+}
+
+#byCharlieStanley {
+	margin-top: -8px;
+}
+
+#mainButtonContainer {
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	height: 120px;
+	width: 100vw; /*vw = viewport width - scales to viewport size*/
+	margin-left: -50px;
+	padding: 0;
+	gap: 20px;
+	display: flex; /*automatically arranges child elements in row or column*/
+	justify-content: flex-start;
+	align-items: center; /*centres content on cross axis (vertical here)*/
+}
+
+#mainButtonContainer #Cloud9ine-logo {
+	height: 60%;
+	object-fit: contain;
+	margin-left: 10px;
+}
+
+.buttons {
+	display: flex;
+	gap: 10px;
+	margin-left: auto;
+}
+
+.spacer { /*sets the height and width of spacer (an empty container from html file), creating a blank section to be copy-pasted*/
+	height: 100px; 
+	width: 100%;
+}
+
+.image-container-London {
+	width: 600px;
+	position: relative;
+	margin: 0;
+}
+
+.image-container-London img {
+	width: 100%;
+	z-index: 1;
+	display: block;
+}
+
+.map-pin-ring-London {
+	position: absolute;
+	top: 586px;
+	left: 445px;
+	width: 20px;
+	height: 18px;
+	border: 3px solid white;
+	border-radius: 50%;
+	background: transparent;
+	z-index: 2;
+	box-shadow: 0 0 2px 1px rgba(0,0,0,0.6);
+}
+
+.map-pin-circle-London {
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	z-index: 3;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: white;
+	border-radius: 50%;
+	box-shadow: 0 0 2px 1px rgba(0,0,0,0.6);
+}
+
+#hoverBox {
+	padding: 7px 20px;
+	position: absolute;
+	top: 73%;
+	left: 80%;
+	background-color: black;
+	opacity: 0.4;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+	transition: all 0.3s ease;
+	z-index: 2;
+}
+
+#hoverBox:hover {
+	text-decoration: underline;
+}
